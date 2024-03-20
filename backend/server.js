@@ -5,6 +5,9 @@ const userRoutes = require('./routes/users');
 const connectDB = require('./config/db');
 
 const app = express();
+app.get('/', function(req, res) {
+    res.send('Hello World!');
+  });  
 
 // Connect to the database
 connectDB();
@@ -15,6 +18,7 @@ app.use('/api/upload', uploadRoutes);
 app.use('/api/laptops', laptopRoutes);
 app.use('/api/users', userRoutes);
 app.use('/uploads', express.static('uploads'));
+app.use('/admin', express.static('client/public')); // corrected path for admin.html
 
 // Other routes and middleware...
 
