@@ -3,17 +3,24 @@ import React, { useState } from 'react';
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [isRegistering, setIsRegistering] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Handle login logic here
-        console.log('Logging in with:', email, password);
+        if (isRegistering) {
+            // Handle registration logic here
+            console.log('Registering with:', email, password, confirmPassword);
+        } else {
+            // Handle login logic here
+            console.log('Logging in with:', email, password);
+        }
     };
 
     return (
         <div className="login-page">
             <div className="login-container">
-                <h1>Login to Laptop Bazaar</h1>
+                <h1>{isRegistering ? 'Register' : 'Login to Laptop Bazaar'}</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
@@ -35,7 +42,24 @@ function LoginPage() {
                             required
                         />
                     </div>
-                    <button type="submit" className="login-button">Login</button>
+                    {isRegistering && (
+                        <div className="form-group">
+                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+                    )}
+                    <button type="submit" className="login-button">
+                        {isRegistering ? 'Register' : 'Login'}
+                    </button>
+                    <button type="button" onClick={() => setIsRegistering(!isRegistering)}>
+                        {isRegistering ? 'Already have an account? Login' : 'Need an account? Register'}
+                    </button>
                 </form>
             </div>
         </div>

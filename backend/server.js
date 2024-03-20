@@ -5,7 +5,7 @@ const userRoutes = require('./routes/users');
 const connectDB = require('./config/db');
 
 const app = express();
-app.get('/', function(req, res) {
+app.get('/', function(_req, res) {
     res.send('Hello World!');
   });  
 
