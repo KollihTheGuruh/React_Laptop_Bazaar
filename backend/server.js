@@ -3,14 +3,13 @@ const uploadRoutes = require('./routes/upload');
 const laptopRoutes = require('./routes/laptops');
 const userRoutes = require('./routes/users');
 const connectDB = require('./config/db');
-
+const dotenv = require('dotenv')
+dotenv.config()
 const app = express();
 app.get('/', function(_req, res) {
     res.send('Hello World!');
   });  
 
-// Connect to the database
-connectDB();
 
 // Middleware
 app.use(express.json()); // for parsing application/json
@@ -24,5 +23,7 @@ app.use('/admin', express.static('client/public')); // corrected path for admin.
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
+  // Connect to the database
+connectDB();
     console.log(`Server is running on port ${PORT}`);
 });
