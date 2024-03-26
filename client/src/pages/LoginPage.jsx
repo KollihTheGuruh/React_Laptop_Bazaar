@@ -6,14 +6,34 @@ function LoginPage() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         if (isRegistering) {
             // Handle registration logic here
             console.log('Registering with:', email, password, confirmPassword);
+
+            try {
+                const response = await fetch('http://localhost:5000/users/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password,
+                        confirmPassword: confirmPassword,
+                    }),
+                });
+                const data = await response.json();
+                console.log('Registration response:', data);
+                // Handle success or error based on the response
+            } catch (error) {
+                console.error('Registration error:', error);
+            }
         } else {
             // Handle login logic here
             console.log('Logging in with:', email, password);
+            // Similar logic for login
         }
     };
 
