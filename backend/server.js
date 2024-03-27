@@ -10,7 +10,9 @@ app.get('/', function(_req, res) {
     res.send('Hello World!');
   });  
 
-
+  const cors = require('cors');
+  app.use(cors());
+  
 // Middleware
 app.use(express.json()); // for parsing application/json
 app.use('/api/upload', uploadRoutes);

@@ -5,8 +5,7 @@ function ComparePage() {
     const [laptops, setLaptops] = useState([]);
 
     useEffect(() => {
-        // Fetch laptops from the backend for comparison
-        fetch('/api/laptops/compare')
+        fetch('http://localhost:3000/api/laptops/compare')
             .then(response => response.json())
             .then(data => setLaptops(data))
             .catch(error => console.error('Error fetching laptops for comparison:', error));

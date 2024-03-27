@@ -6,6 +6,45 @@ body, html {
 }
 
 /* Header Styles */
+/* Header.css */
+
+.header .nav-item button {
+    background-color: #f8f4f3; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.home-page {
+    position: relative;
+    overflow: hidden; /* Prevents the header from overflowing the container */
+}
+
+.moving-header {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 80px; /* Adjust this value as needed to position it below the h1 */
+    animation: moveHeader 5s linear infinite;
+    white-space: nowrap;
+    color: rgb(10, 10, 10);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+@keyframes moveHeader {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves only half the width of the element */
+    }
+}
+
 .header {
     background-color: #333;
     color: #fff;

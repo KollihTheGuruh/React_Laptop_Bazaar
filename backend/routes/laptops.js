@@ -59,4 +59,13 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+router.get('/compare', async (req, res) => {
+    try {
+        const laptops = await Laptop.find(); // Modify this to fetch only the laptops needed for comparison
+        res.json(laptops);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
 module.exports = router;
