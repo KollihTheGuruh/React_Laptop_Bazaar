@@ -27,11 +27,11 @@ body, html {
     position: absolute;
     left: 25%;
     right: 25%;
-    top: 80px; /* Adjust this value as needed to position it below the h1 */
+    top: 60px; /* Adjust this value as needed to position it below the h1 */
     animation: moveHeader 5s linear infinite;
     white-space: nowrap;
     color: rgb(10, 10, 10);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
