@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { ShopContext } from '../contexts/shop-context'; // Import ShopContext
+import { PRODUCTS } from '../products'; // Import PRODUCTS
 import CompareTable from '../components/CompareTable';
 
 function ComparePage() {
-    const [laptops, setLaptops] = useState([]);
+    const { compareItems } = useContext(ShopContext); // Use ShopContext to get compareItems
 
-    useEffect(() => {
-        fetch('http://localhost:3000/api/laptops/compare')
-            .then(response => response.json())
-            .then(data => setLaptops(data))
-            .catch(error => console.error('Error fetching laptops for comparison:', error));
-    }, []);
+    // Filter the PRODUCTS array to get only the laptops that are selected for comparison
+    const laptopsToCompare = PRODUCTS.filter(product => compareItems[product.id]);
 
     return (
         <div className="compare-page">
             <h1>Compare Laptops</h1>
-            <CompareTable laptops={laptops} />
+            <CompareTable laptops={laptopsToCompare} /> {/* Pass the filtered laptops to CompareTable */}
         </div>
     );
 }

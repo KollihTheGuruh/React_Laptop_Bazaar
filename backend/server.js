@@ -3,7 +3,8 @@ const uploadRoutes = require('./routes/upload');
 const laptopRoutes = require('./routes/laptops');
 const userRoutes = require('./routes/users');
 const connectDB = require('./config/db');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+require('dotenv').config();
 dotenv.config()
 const app = express();
 app.get('/', function(_req, res) {

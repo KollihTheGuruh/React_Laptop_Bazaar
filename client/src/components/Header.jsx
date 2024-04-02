@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { ShopContext } from '../contexts/shop-context';
+import { useContext } from 'react';
+
 
 function Header() {
     const { isAuthenticated, setIsAuthenticated } = useAuth();
-
+    const { compareItems } = useContext(ShopContext);
+    const compareCount = Object.values(compareItems).filter(val => val).length;
     const handleLogout = () => {
         setIsAuthenticated(false);
         // Perform any additional logout logic here
@@ -19,7 +23,7 @@ function Header() {
                 <nav className="navbar">
                     <ul className="nav-list">
                         <li className="nav-item"><Link to="/">Home</Link></li>
-                        <li className="nav-item"><Link to="/compare">Compare</Link></li>
+                        <li className="nav-item"><Link to="/compare">Compare ({compareCount})</Link></li>
                         {isAuthenticated ? (
                             <li className="nav-item">
                                 <button onClick={handleLogout}>Logout</button>

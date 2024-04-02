@@ -1,0 +1,78 @@
+.shopTitle {
+  background-color: #e5e5f7; /* A pleasant blue background */
+  color: rgb(14, 13, 13); /* White text color for contrast */
+  padding: 20px 0; /* Padding above and below the title */
+  text-align: center; /* Center align the title text */
+  margin-bottom: 50px; /* Space after the title before the products start */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the title off the page */
+  border-radius: 5px; /* Slightly rounded corners for a softer look */
+  position: sticky;
+  top: 60px;
+  z-index: 500;
+}
+
+.shopTitle h1 {
+  margin: 0; /* Remove default margin from the h1 */
+  font-size: 2.5rem; /* Large font size for the title */
+  font-weight: 700; /* Make the font weight bold */
+  letter-spacing: 1.5px; /* Add some letter spacing for a more refined look */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .shopTitle {
+    padding: 15px 0;
+  }
+
+  .shopTitle h1 {
+    font-size: 2rem;
+  }
+}
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.product {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product img {
+  width: 400px;
+}
+
+.product .description {
+  text-align: center;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttn {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  cursor: pointer;
+}
