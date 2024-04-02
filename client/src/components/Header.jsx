@@ -16,7 +16,7 @@ function Header() {
 
     return (
         <header className="header">
-            <div className="container">
+            <div className="logo-container">
                 <div className="logo">
                     <Link to="/">Laptop Bazaar</Link>
                 </div>

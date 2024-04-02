@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="footer">
-            <div className="container">
+        <footer>
+            <div className="footer-container">
                 <p>&copy; {new Date().getFullYear()} Laptop Bazaar. All rights reserved.</p>
             </div>
         </footer>

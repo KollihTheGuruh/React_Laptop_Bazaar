@@ -65,17 +65,21 @@ body, html {
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
+    z-index: 500;
 }
 
+.login-container {
+    z-index: 500;
+}
 .navbar {
     position: fixed;
     display:flex;
     top:0;
-    left: 0;
-    right: 0;
-    width: 120%; /* Take the full width of the screen */
-    z-index: 1000; /* Ensure it's above other content */
-    background-color: #0a0a0a; /* Optional: Change this to your navbar background color */
+    left: 70%;
+    /* right: 50%; */
+    width: 100%; /* Take the full width of the screen */
+    z-index: 500; /* Ensure it's above other content */
+    background-color: #535b63; /* Optional: Change this to your navbar background color */
     /* Add other styling as needed */
   }
 
@@ -100,11 +104,11 @@ body, html {
 }
 
 /* Footer Styles */
-.footer {
-    background-color: #333;
-    color: #fff;
+.footer-container {
+    background-color: #e5e5f7;
+    color:black;
     text-align: center;
-    padding: 10px 0;
+    padding: 1px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
