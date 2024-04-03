@@ -1,12 +1,12 @@
 .shopTitle {
   /* background-color: #e5e5f7; A pleasant blue background */
-  color: rgb(238, 97, 97); /* White text color for contrast */
+  color: rgb(94, 84, 84); /* White text color for contrast */
   padding: 0px 0; /* Padding above and below the title */
   text-align: center; /* Center align the title text */
   margin-bottom: 50px; /* Space after the title before the products start */
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); A subtle shadow to lift the title off the page */
   border-radius: 5px; /* Slightly rounded corners for a softer look */
-  position: sticky;
+  position: relative;
   top: 60px;
   z-index: 700;
 }
@@ -38,8 +38,8 @@
 
 .product {
   border-radius: 15px;
-  width: 300px;
-  height: 350px;
+  width: 100;
+  height: auto;
   margin: 100px;
   display: flex;
   flex-direction: column;
