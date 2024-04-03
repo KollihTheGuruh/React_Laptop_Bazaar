@@ -16,12 +16,11 @@ function Header() {
 
     return (
         <header className="header">
-            <div className="logo-container">
-                <div className="logo">
-                    <Link to="/">Laptop Bazaar</Link>
-                </div>
+             <div className="logo-container">
+               <div><Link to="/">Laptop Bazaar</Link></div>
                 <nav className="navbar">
                     <ul className="nav-list">
+                        {/* <li className="nav-item"><Link to="/">Laptop Bazaar</Link></li> */}
                         <li className="nav-item"><Link to="/">Home</Link></li>
                         <li className="nav-item"><Link to="/compare">Compare ({compareCount})</Link></li>
                         {isAuthenticated ? (
