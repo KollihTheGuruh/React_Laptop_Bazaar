@@ -91,5 +91,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Acknowledgments
 
 - Special thanks to everyone who contributed to the initial concept and design of Laptop Bazaar.
+    **Hillary Kiprotich**
+    **Merlix Gikunju**
+    
 
 
