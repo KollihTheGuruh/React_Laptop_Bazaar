@@ -41,5 +41,6 @@ The project follows a timeline with swift progress and focused milestones, inclu
 To run the project locally, follow these steps:
 
 1. Clone the repository:
-
-`git clone https://github.com/KollihTheGuruh/React_Laptop_Bazaar.git`
+``bash
+git clone https://github.com/KollihTheGuruh/React_Laptop_Bazaar.git
+``
