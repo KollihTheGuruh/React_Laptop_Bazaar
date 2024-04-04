@@ -10,7 +10,7 @@ import product8 from "./assets/products/8.jpg";
 export const PRODUCTS = [
   {
     id: 1,
-    productName: "Macbook pro",
+    productName: "Apple - MacBook Pro",
     price: 999.0,
     productImage: product1,
   },
