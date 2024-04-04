@@ -3,7 +3,7 @@ import { ShopContext } from '../contexts/shop-context';
 import { PRODUCTS } from '../products';
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
-import { CheckoutButton } from '../components/Checkout';
+// import { CheckoutButton } from '../components/Checkout';
 import "./cart.css";
 
 export const Cart = () => {
