@@ -8,8 +8,7 @@ import ComparePage from './pages/ComparePage';
 import LoginPage from './pages/LoginPage';
 import { Cart } from './pages/cart';
 import { ContactPage } from './pages/ContactPage';
-import AboutUs from './pages/AboutUs'; // Correct import statement for AboutUs
-// import LaptopsList from './components/LaptopsList'; // Remove this import if not used
+import AboutUs from './pages/AboutUs';
 import { AuthProvider } from './contexts/AuthContext';
 import { ShopContextProvider } from './contexts/shop-context';
 
@@ -27,9 +26,8 @@ function App() {
                                 <Route path="/login" element={<LoginPage />} />
                                 <Route path="/contact" element={<ContactPage />} />
                                 <Route path="/cart" element={<Cart />} />
-                                <Route path="/about" element={<AboutUs />} /> {/* Use element instead of component for React Router v6 */}
+                                <Route path="/about" element={<AboutUs />} />
                                 <Route path="/" element={<Shop />} />
-                                {/* Add more routes as needed */}
                             </Routes>
                         </main>
                         <Footer />
