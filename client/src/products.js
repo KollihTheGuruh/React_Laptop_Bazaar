@@ -6,7 +6,6 @@ import product5 from "./assets/products/5.jpg";
 import product6 from "./assets/products/6.webp";
 import product7 from "./assets/products/7.png";
 import product8 from "./assets/products/8.jpg";
-// Assuming you have these imports already for products 9 and 10
 import product9 from "./assets/products/9.jpg";
 import product10 from "./assets/products/10.jpg";
 
@@ -18,7 +17,7 @@ export const PRODUCTS = [
     brand: 'Apple',
     processor: 'M3 Max',
     ram: '36 GB',
-    storage: '1 TB SSD',
+    storage: '2 TB SSD',
     generation: '13TH',
     screenSize: '16.2',
     speed: '120 hertz',
