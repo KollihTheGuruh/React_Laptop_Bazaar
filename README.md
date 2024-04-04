@@ -14,6 +14,8 @@
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
+[Visit Laptop Bazaar Live Website](https://react-laptop-bazaar-qxh4.vercel.app/)
+
 ## Introduction
 
 Laptop Bazaar is a web-based platform designed to simplify the process of selecting and purchasing laptops. It allows users to apply multiple filter criteria simultaneously, with results updating in real time as options change, ensuring an intuitive and accessible laptop selection process.
