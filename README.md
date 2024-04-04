@@ -70,3 +70,25 @@ To get a local copy up and running follow these simple steps:
 ```bash
 git clone https://github.com/KollihTheGuruh/React_Laptop_Bazaar.git
 ```
+2. Install NPM packages
+```bash
+npm install
+```
+3. Start the project
+```bash
+npm start
+```
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Acknowledgments
+
+- Special thanks to everyone who contributed to the initial concept and design of Laptop Bazaar.
+
+
